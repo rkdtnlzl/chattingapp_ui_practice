@@ -40,7 +40,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                             children: [
                               TextSpan(
                                   text: isSignupScreen
-                                      ? ' to Yummy chat! '
+                                      ? ' to Seok chat! '
                                       : ' back',
                                   style: TextStyle(
                                       letterSpacing: 1.0,
@@ -66,9 +66,12 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
             ),
           ),
           //배경
-          Positioned(
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 500),
+            curve: Curves.easeIn,
             top: 180,
-            child: Container(
+            child: AnimatedContainer(
+              duration: Duration(milliseconds: 500),
               padding: EdgeInsets.all(20.0),
               height: isSignupScreen ? 280.0 : 250.0,
               width: MediaQuery.of(context).size.width - 40,
@@ -252,7 +255,9 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
             ),
           ),
           //텍스트 폼  필드
-          Positioned(
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 500),
+            curve: Curves.easeIn,
             top: isSignupScreen ? 430 : 390,
             right: 0,
             left: 0,
